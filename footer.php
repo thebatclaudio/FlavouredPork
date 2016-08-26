@@ -2,9 +2,28 @@
 </div>
 
 <script type="text/javascript">
-jQuery(window).on("scroll", function () {
-    jQuery(".posts-container").addClass("opened");
-    jQuery(".sidebar-container").addClass("closed");
+
+jQuery(function($) {
+  var top = $('.sidebar-container').position().top;
+
+  function fixSidebar() {
+    var sidebar = $('.sidebar-container');
+    console.log($(window).scrollTop());
+    if ($(window).scrollTop() > top) {
+      sidebar.css({
+        'position': 'fixed',
+        'top': '0px',
+        'right': '0px'
+      });    	
+  	} else {
+      sidebar.css({
+        'position': 'relative',
+        'top': 'auto'
+      });  		
+  	}
+  }
+  $(window).scroll(fixSidebar);
+  fixDiv();
 });
 
 jQuery("#menu-button").on("click", function () {
