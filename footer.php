@@ -22,7 +22,7 @@ jQuery(function($) {
   	}
   }
 
-  if($(window).width() < 992) {
+  if($(window).width() > 992) {
     $(window).scroll(fixSidebar);
     fixDiv();    
   }
