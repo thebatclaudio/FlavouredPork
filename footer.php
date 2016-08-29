@@ -8,7 +8,6 @@ jQuery(function($) {
 
   function fixSidebar() {
     var sidebar = $('.sidebar-container');
-    console.log($(window).scrollTop());
     if ($(window).scrollTop() > top) {
       sidebar.css({
         'position': 'fixed',
@@ -22,8 +21,11 @@ jQuery(function($) {
       });  		
   	}
   }
-  $(window).scroll(fixSidebar);
-  fixDiv();
+
+  if($(window).width() < 992) {
+    $(window).scroll(fixSidebar);
+    fixDiv();    
+  }
 });
 
 jQuery("#menu-button").on("click", function () {
