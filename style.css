@@ -126,20 +126,14 @@ article.post:nth-child(even) {
     color: rgba(255,255,255,0.87);
 }
 
-.post a.category-link:hover, .post a.category-link:focus, .post a.category-link:active, .post a.btn-continue-reading:hover, .post a.btn-continue-reading:active, .post a.btn-continue-reading:focus {
-    text-decoration: none;
-    background-color: #B71C1C;
-    color: rgba(255,255,255,0.87);
+.post:nth-child(even) a.category-link {
+    background-color: #E0E0E0;
+    color: rgba(0,0,0,0.87);
 }
 
 .post .category {
     text-align: center;
     margin-top: -10px;
-}
-
-.post:nth-child(even) a.category-link {
-    background-color: #E0E0E0;
-    color: rgba(0,0,0,0.87);
 }
 
 /* post title */
@@ -211,6 +205,12 @@ a.btn-continue-reading {
 
 .post:nth-child(even) a.btn-continue-reading {
     background-color: #424242;
+    color: rgba(255,255,255,0.87);
+}
+
+.post a.category-link:hover, .post a.category-link:focus, .post a.category-link:active, .post a.btn-continue-reading:hover, .post a.btn-continue-reading:active, .post a.btn-continue-reading:focus {
+    text-decoration: none;
+    background-color: #B71C1C;
     color: rgba(255,255,255,0.87);
 }
 
