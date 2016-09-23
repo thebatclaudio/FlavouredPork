@@ -352,6 +352,7 @@ a#menu-button {
     line-height: 50px;
     z-index: 9999;
     transition: left 300ms, color 300ms;
+    cursor: pointer;
 }
 
 a#menu-button.opened {
