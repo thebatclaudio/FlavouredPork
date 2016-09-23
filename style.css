@@ -451,6 +451,10 @@ span.web-developer span.developer {
     background-color: #C62828;
 }
 
+.post.page {
+    padding-top: 10px;
+}
+
 .error404 .post.single {
     padding: 20px 10px;
 }
