@@ -451,6 +451,10 @@ span.web-developer span.developer {
     background-color: #C62828;
 }
 
+.error404 .post.single {
+    padding: 20px 10px;
+}
+
 @media (min-width: 767px) {
     .post-content .tags {
         display: block;
@@ -461,6 +465,10 @@ span.web-developer span.developer {
     nav.posts-pagination {
         width: 30%;
         margin: 10px auto;
+    }
+
+    .error404 .post.single {
+        padding: 20px 40px;
     }
 }
 
