@@ -486,6 +486,11 @@ span.web-developer span.developer {
         padding-left: 2%;
     }
 
+    .posts-container.without-sidebar {
+        padding-left: 2%;
+        padding-right: 2%;
+    }
+
     .sidebar-container {
         padding-right: 2%;
     }

@@ -1,10 +1,5 @@
 <?php get_header(); ?>
 
-<?php get_footer(); ?>
-
-
-<?php get_header(); ?>
-
     <?php if(have_posts()): ?>
 
         <?php while (have_posts()) : the_post(); ?>
@@ -23,7 +18,9 @@
                     </div>
 
                     <div class="comments">
-                        <?php comments_template(); ?>
+                        <?php if(comments_open()): ?>
+                            <?php comments_template(); ?>
+                        <?php endif; ?>
                     </div>
                 </div>
             </article>
