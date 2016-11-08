@@ -8,14 +8,14 @@ require_once("includes/about-me-widget.php");
  */
 function flv_prk_load_scripts_and_styles () {
     /*Load Scripts*/
-    wp_register_script( 'jquery-script', 'http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js','','',false );
+    wp_register_script( 'jquery-script', '//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js','','',false );
     wp_enqueue_script( 'jquery-script' );
 
     wp_register_script( 'bootstrap', get_template_directory_uri() . '/js/bootstrap.min.js','','',true );
     wp_enqueue_script( 'bootstrap' );
 
     /*Load Styles*/
-    wp_register_style('google-fonts', 'http://fonts.googleapis.com/css?family=Montserrat:400,700|Oswald:400,700,300');
+    wp_register_style('google-fonts', '//fonts.googleapis.com/css?family=Montserrat:400,700|Oswald:400,700,300');
     wp_enqueue_style( 'google-fonts');
 
     wp_register_style('bootstrap', get_template_directory_uri() . '/css/bootstrap.min.css');
@@ -134,5 +134,11 @@ function flv_prk_widgets_init () {
 
 add_action( 'widgets_init', 'flv_prk_widgets_init' );
 
+function flv_prk_custom_posts_per_page($query) {
+    $query->set('posts_per_page', 9);
+} //function
+
+//this adds the function above to the 'pre_get_posts' action     
+add_action('pre_get_posts', 'flv_prk_custom_posts_per_page');
 
 ?>
