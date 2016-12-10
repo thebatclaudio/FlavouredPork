@@ -114,10 +114,10 @@ function flv_prk_numeric_posts_nav () {
 }
 
 // Replace [...] with ... in the "Read more"
-function new_excerpt_more ( $more ) {
+function flv_prk_excerpt_more ( $more ) {
     return '...';
 }
-add_filter('excerpt_more', 'new_excerpt_more');
+add_filter('excerpt_more', 'flv_prk_excerpt_more');
 
 //Register main sidebar
 function flv_prk_widgets_init () {

@@ -1,6 +1,6 @@
 <?php
 
-class AboutMeWidget extends WP_Widget {
+class FlvPrkAboutMeWidget extends WP_Widget {
 
     /**
      * Sets up the widgets name etc
@@ -86,8 +86,8 @@ class AboutMeWidget extends WP_Widget {
     }
 }
 
-function register_about_me_widget() {
-    register_widget( 'AboutMeWidget' );
+function flv_prk_register_about_me_widget() {
+    register_widget( 'FlvPrkAboutMeWidget' );
 }
 
-add_action( 'widgets_init', 'register_about_me_widget' );
+add_action( 'widgets_init', 'flv_prk_register_about_me_widget' );
