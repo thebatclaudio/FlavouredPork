@@ -32,6 +32,10 @@ a:hover, a:focus {
     text-decoration: none;
 }
 
+input[type=text], textarea {
+    color: #000;
+}
+
 .btn {
     border-radius: 0px;
 }
@@ -243,6 +247,15 @@ a.btn-continue-reading {
     border-radius: 0px;
 }
 
+.pagination>.active>a, .pagination>.active>a:focus, .pagination>.active>a:hover, .pagination>.active>span, .pagination>.active>span:focus, .pagination>.active>span:hover {
+    background-color: #B71C1C;
+    border-color: #B71C1C;
+}
+
+.pagination>li>a:focus, .pagination>li>a:hover, .pagination>li>span:focus, .pagination>li>span:hover {
+    color: #000;
+}
+
 .sidebar-container {
     padding-left: 0px;
     padding-right: 0px;
@@ -438,7 +451,7 @@ span.web-developer span.developer {
     border-radius: 0px
 }
 
-.wpcf7-form-control.wpcf7-submit {
+input[type=submit], .wpcf7-form-control.wpcf7-submit {
     display: block;
     width: 100%;
     background-color: #B71C1C;
@@ -448,8 +461,9 @@ span.web-developer span.developer {
     text-transform: uppercase;
 }
 
-.wpcf7-form-control.wpcf7-submit:hover, .wpcf7-form-control.wpcf7-submit:focus {
+input[type=submit]:hover, input[type=submit]:focus, .wpcf7-form-control.wpcf7-submit:hover, .wpcf7-form-control.wpcf7-submit:focus {
     background-color: #C62828;
+    outline-color: rgba(183, 28, 28, 0.62);
 }
 
 .post.page {
@@ -458,6 +472,21 @@ span.web-developer span.developer {
 
 .error404 .post.single {
     padding: 20px 10px;
+}
+
+.post #respond {
+    padding: 20px 0px;
+}
+
+.post textarea#comment {
+    color: #000;
+    display: block;
+    width: 100%;
+}
+
+.comment-respond input {
+    display: block;
+    width: 100%;
 }
 
 @media (min-width: 767px) {

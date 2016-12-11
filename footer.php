@@ -3,28 +3,36 @@
 
 <script type="text/javascript">
 
-jQuery(function($) {
-  var top = $('.sidebar-container').position().top;
-
-  function fixSidebar() {
-    var sidebar = $('.sidebar-container');
-    if ($(window).scrollTop() > top) {
-      sidebar.css({
-        'position': 'fixed',
-        'top': '0px',
-        'right': '0px'
-      });    	
-  	} else {
-      sidebar.css({
-        'position': 'relative',
-        'top': 'auto'
-      });  		
-  	}
+function flvPrkFixSidebar() {
+  if ($(window).scrollTop() > $('.sidebar-container').position().top) {
+    $('.sidebar-container').css({
+      'position': 'fixed',
+      'top': '0px',
+      'right': '0px'
+    });     
+  } else {
+    $('.sidebar-container').css({
+      'position': 'relative',
+      'top': 'auto'
+    });     
   }
+}
 
-  if($(window).width() > 992) {
-    $(window).scroll(fixSidebar);
-    fixDiv();    
+$(document).ready(function() {
+  $('.sidebar-container').position().top;
+
+  if($(window).width() > 992 
+    && $('.sidebar-container').height() < $('.posts-container').height() 
+    && $('.sidebar-container').height() < $(window).height()) {
+    $(window).scroll(flvPrkFixSidebar);
+  }
+});
+
+jQuery(window).resize(function() {
+  if($(window).width() > 992 
+    && $('.sidebar-container').height() < $('.posts-container').height() 
+    && $('.sidebar-container').height() < $(window).height()) {
+    $(window).scroll(flvPrkFixSidebar);
   }
 });
 
