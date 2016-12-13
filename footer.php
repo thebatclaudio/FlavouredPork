@@ -21,7 +21,7 @@ function flvPrkFixSidebar() {
 }
 
 $(document).ready(function() {
-  topPosition = $('.sidebar-container').position().top;
+  topPosition = 680;
 
   if($(window).width() > 992 
     && $('.sidebar-container').height() < $('.posts-container').height() 

@@ -21,6 +21,12 @@ body {
 
 header {
     text-align: center;
+    height: 160px;
+    padding-top: 40px;
+    background-size: auto 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: 20px 0px;
 }
 
 a:link, a:visited, a:active {
@@ -275,6 +281,7 @@ a.btn-continue-reading {
 .main-sidebar .widget {
     background-color: #B71C1C;
     padding: 10px;
+    padding-bottom: 40px;
 }
 
 .main-sidebar .widget:nth-child(even) {
@@ -293,6 +300,15 @@ a.btn-continue-reading {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+}
+
+img.about-me-image {
+    display: block;
+    margin: 20px auto;
+    max-width: 80%;
+    max-height: 140px;
+    width: auto;
+    height: auto;
 }
 
 .about-me-description {
@@ -489,6 +505,109 @@ input[type=submit]:hover, input[type=submit]:focus, .wpcf7-form-control.wpcf7-su
     width: 100%;
 }
 
+.flexslider {
+    border: 0px;
+    margin-bottom: 0px;
+}
+
+.flex-direction-nav .flex-prev {
+    left: 10px;
+}
+
+.flex-direction-nav .flex-next {
+    right: 10px;
+}
+
+.main-posts {
+    padding-left: 35px;
+    padding-right: 35px;
+}
+
+.main-posts .col-md-6.left {
+    padding-right: 0px;
+}
+
+.main-posts .col-md-6.right {
+    padding-left: 0px;
+}
+
+.slide {
+    height: 500px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #FFF;
+}
+
+.slide::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+0,000000+100&0+0,0.65+100 */
+    background: -moz-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,1) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0,0,0,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#a6000000',GradientType=0 ); /* IE6-9 */
+}
+
+.slide img {
+    display: none;
+}
+
+.col-md-6.right .slide,  .col-md-6.mid-height .slide{
+    height: 250px;
+}
+
+.slide-post-content {
+    display: block;
+    position: absolute;
+    bottom: 0px;
+    padding: 20px;
+    width: 100%;
+}
+
+.slide-post-content h3 {
+    font-size: 32px;
+    margin: 0px;
+}
+
+.col-md-6.right .slide .slide-post-content h3 {
+    font-size: 18px;
+}
+
+/* category link hover featured image */
+.slide a.category-link {
+    display: inline-block;
+    width: auto;
+    padding: 5px;
+    margin-right: 0px;
+    background-color: #B71C1C;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.87);
+    text-align: right;
+}
+
+.slide a.category-link:hover, .slide a.category-link:focus, .slide a.category-link:active, .slide a.btn-continue-reading:hover, .slide a.btn-continue-reading:active, .slide a.btn-continue-reading:focus {
+    text-decoration: none;
+    background-color: #C62828;
+    color: rgba(255,255,255,0.87);
+}
+
+.slide .category {
+    text-align: left;
+    margin-top: 0px;
+    margin-bottom: 5px;
+}
+
+.slide a h3 {
+    color: #FFF;
+}
+
+.slide a:hover h3, .slide a:focus h3, .slide a:active h3 {
+    color: #E57373;
+}
+
 @media (min-width: 767px) {
     .post-content .tags {
         display: block;
@@ -512,21 +631,21 @@ input[type=submit]:hover, input[type=submit]:focus, .wpcf7-form-control.wpcf7-su
     }
 
     .posts-container {
-        padding-left: 2%;
+        padding-left: 50px;
     }
 
     .posts-container.without-sidebar {
-        padding-left: 2%;
-        padding-right: 2%;
+        padding-left: 50px;
+        padding-right: 50px;
     }
 
     .sidebar-container {
-        padding-right: 2%;
+        padding-right: 50px;
     }
 
     .posts-container.opened {
         width: 100%;
-        padding-right: 2%;
+        padding-right: 50px;
         transition: padding-right 1s, width 1s;
         transition-timing-function: cubic-bezier(0.7,0,0.3,1);
         transition-delay: 500ms;

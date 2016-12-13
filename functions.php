@@ -1,6 +1,7 @@
 <?php
 
-require_once("includes/about-me-widget.php");
+require_once("includes/about_me_widget.php");
+require_once("includes/slider_post_type.php");
 
 /**
  * Function called to load common scripts and styles (e.g Bootstrap, jQuery, FontAwesome)
@@ -141,4 +142,12 @@ function flv_prk_custom_posts_per_page($query) {
 //this adds the function above to the 'pre_get_posts' action     
 add_action('pre_get_posts', 'flv_prk_custom_posts_per_page');
 
+$args = array(
+    'width'         => 1920,
+    'height'        => 160,
+    'flex-width'    => true,
+    'flex-height'   => true,
+    'default-image' => get_template_directory_uri() . '/images/header.jpg',
+);
+add_theme_support( 'custom-header', $args );
 ?>

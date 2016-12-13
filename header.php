@@ -13,7 +13,7 @@
 
 <body <?php body_class(); ?>>
 
-  <header>
+  <header style="background-image: url(<?php header_image(); ?>); height: <?php echo get_custom_header()->height; ?>">
     <a href="<?php echo site_url(); ?>" title="<?php _e("Return to home"); ?>" class="return-to-home">
       <h1 class="site-title"><?php bloginfo('title');?></h1>
       <h2 class="site-description"><?php bloginfo('description'); ?></h2>

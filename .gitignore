@@ -16,3 +16,4 @@ wp-content/plugins/hello.php
 /sitemap.xml
 /sitemap.xml.gz
 sftp-config.json
+sftp-config-alt.json

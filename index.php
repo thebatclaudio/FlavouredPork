@@ -1,5 +1,85 @@
 <?php get_header(); ?>
 
+    <div class="row main-posts">
+    	<div class="col-md-6 left">
+    		<?php the_post(); ?>
+            <div class="slide" style="background-image: url('<?php echo wp_get_attachment_url( get_post_thumbnail_id(get_the_ID()));?>')">
+                <img src="<?php echo wp_get_attachment_url( get_post_thumbnail_id(get_the_ID()));?>" alt="<?php the_title(); ?>" />                 	
+            	<div class="slide-post-content">
+            		<?php $cat = get_the_category(); ?>
+					<?php if($cat): ?>
+						<div class="category">
+							<a href="<?php echo get_category_link($cat[0]->term_id); ?>" title="<?php echo $cat[0]->name;?>" class="category-link">
+								<?php echo $cat[0]->name;?>
+							</a>
+						</div>
+					<?php endif; ?>
+            		<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><h3><?php the_title(); ?></h3></a>
+            		<div class="date">
+						<time datetime="get_the_time('U')" class=""><?php echo human_time_diff( get_the_time('U'), current_time('timestamp') ) .  __( ' fa', 'flv-prk' ); ?></time>
+					</div>
+            	</div>
+            </div>
+    	</div>
+    	<div class="col-md-6 right">
+    		<div class="row">
+    			<div class="col-md-12">
+		    		<?php the_post(); ?>
+	                <div class="slide" style="background-image: url('<?php echo wp_get_attachment_url( get_post_thumbnail_id(get_the_ID()));?>')">
+	                    <img src="<?php echo wp_get_attachment_url( get_post_thumbnail_id(get_the_ID()));?>" alt="<?php the_title(); ?>" />                   	
+	                	<div class="slide-post-content">
+	                		<?php $cat = get_the_category(); ?>
+	                		<?php if($cat): ?>
+								<div class="category">
+									<a href="<?php echo get_category_link($cat[0]->term_id); ?>" title="<?php echo $cat[0]->name;?>" class="category-link">
+										<?php echo $cat[0]->name;?>
+									</a>
+								</div>
+							<?php endif; ?>
+	                		<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><h3><?php the_title(); ?></h3></a>
+	                	</div>
+	                </div>
+                </div>
+            </div>  
+            <div class="row">
+            	<div class="col-md-6 left">
+		    		<?php the_post(); ?>
+	                <div class="slide" style="background-image: url('<?php echo wp_get_attachment_url( get_post_thumbnail_id(get_the_ID()));?>')">
+	                    <img src="<?php echo wp_get_attachment_url( get_post_thumbnail_id(get_the_ID()));?>" alt="<?php the_title(); ?>" />
+	                	<div class="slide-post-content">
+	                		<?php $cat = get_the_category(); ?>
+	                		<?php if($cat): ?>
+								<div class="category">
+									<a href="<?php echo get_category_link($cat[0]->term_id); ?>" title="<?php echo $cat[0]->name;?>" class="category-link">
+										<?php echo $cat[0]->name;?>
+									</a>
+								</div>
+							<?php endif; ?>
+	                		<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><h3><?php the_title(); ?></h3></a>
+	                	</div>
+	                </div>
+            	</div>
+            	<div class="col-md-6 right">
+		    		<?php the_post(); ?>
+	                <div class="slide" style="background-image: url('<?php echo wp_get_attachment_url( get_post_thumbnail_id(get_the_ID()));?>')">
+	                    <img src="<?php echo wp_get_attachment_url( get_post_thumbnail_id(get_the_ID()));?>" alt="<?php the_title(); ?>" />                	
+	                	<div class="slide-post-content">
+	                		<?php $cat = get_the_category(); ?>
+	                		<?php if($cat): ?>
+								<div class="category">
+									<a href="<?php echo get_category_link($cat[0]->term_id); ?>" title="<?php echo $cat[0]->name;?>" class="category-link">
+										<?php echo $cat[0]->name;?>
+									</a>
+								</div>
+							<?php endif; ?>
+	                		<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><h3><?php the_title(); ?></h3></a><a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
+	                	</div>
+	                </div>
+            	</div>
+            </div>
+    	</div>	    	
+    </div>
+
 	<div class="row">
 		<div class="posts-container col-md-8">
 
@@ -50,4 +130,4 @@
 
 	</div>
 
-<?php get_footer(); ?> 
+<?php get_footer(); ?>
