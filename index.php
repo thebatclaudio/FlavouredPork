@@ -16,7 +16,7 @@
 					<?php endif; ?>
             		<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><h3><?php the_title(); ?></h3></a>
             		<div class="date">
-						<time datetime="get_the_time('U')" class=""><?php echo human_time_diff( get_the_time('U'), current_time('timestamp') ) .  __( ' fa', 'flv-prk' ); ?></time>
+						<time datetime="get_the_time('U')" class=""><?php echo human_time_diff( get_the_time('U'), current_time('timestamp') ) .  __( ' ago', 'flv-prk' ); ?></time>
 					</div>
             	</div>
             </div>
@@ -99,14 +99,14 @@
 					<?php endif; ?>
 					<div class="post-content">
 						<div class="date">
-							<time datetime="get_the_time('U')" class=""><?php echo human_time_diff( get_the_time('U'), current_time('timestamp') ) .  __( ' fa', 'flv-prk' ); ?></time>
+							<time datetime="get_the_time('U')" class=""><?php echo human_time_diff( get_the_time('U'), current_time('timestamp') ) .  __( ' ago', 'flv-prk' ); ?></time>
 						</div>
 						<h3 class="title"><?php the_title(); ?></h3>
 						<?php the_excerpt(); ?>
 						<div class="tags">
 							<?php the_tags("",""); ?>
 						</div>
-						<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>" class="btn btn-continue-reading"><?php _e('Read', 'cloudwp'); ?></a>
+						<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>" class="btn btn-continue-reading"><?php _e('Read', 'flv-prk'); ?></a>
 					</div>
 				</article>
 			<?php endwhile; ?>
