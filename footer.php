@@ -3,8 +3,10 @@
 
 <script type="text/javascript">
 
+var topPosition = 0;
+
 function flvPrkFixSidebar() {
-  if ($(window).scrollTop() > $('.sidebar-container').position().top) {
+  if ($(window).scrollTop() > topPosition) {
     $('.sidebar-container').css({
       'position': 'fixed',
       'top': '0px',
@@ -19,7 +21,7 @@ function flvPrkFixSidebar() {
 }
 
 $(document).ready(function() {
-  $('.sidebar-container').position().top;
+  topPosition = $('.sidebar-container').position().top;
 
   if($(window).width() > 992 
     && $('.sidebar-container').height() < $('.posts-container').height() 
@@ -29,6 +31,8 @@ $(document).ready(function() {
 });
 
 jQuery(window).resize(function() {
+  topPosition = $('.sidebar-container').position().top;
+
   if($(window).width() > 992 
     && $('.sidebar-container').height() < $('.posts-container').height() 
     && $('.sidebar-container').height() < $(window).height()) {
