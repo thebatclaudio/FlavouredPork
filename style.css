@@ -519,16 +519,18 @@ input[type=submit]:hover, input[type=submit]:focus, .wpcf7-form-control.wpcf7-su
 }
 
 .main-posts {
-    padding-left: 35px;
-    padding-right: 35px;
+    padding-left: 0px;
+    padding-right: 0px;
 }
 
 .main-posts .col-md-6.left {
     padding-right: 0px;
+    padding-left: 0px;
 }
 
 .main-posts .col-md-6.right {
     padding-left: 0px;
+    padding-right: 0px;
 }
 
 .slide {
@@ -628,6 +630,19 @@ input[type=submit]:hover, input[type=submit]:focus, .wpcf7-form-control.wpcf7-su
 @media (min-width: 1200px) {
     .post-content p {
         display: block;
+    }
+
+    .main-posts {
+        padding-left: 35px;
+        padding-right: 35px;
+    }
+
+    .main-posts .col-md-6.left {
+        padding-left: 15px;
+    }
+
+    .main-posts .col-md-6.right {
+        padding-right: 15px;
     }
 
     .posts-container {

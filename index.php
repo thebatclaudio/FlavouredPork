@@ -1,5 +1,7 @@
 <?php get_header(); ?>
 
+	<?php $paged = (get_query_var('paged')) ? get_query_var('paged') : 1; ?>
+	<?php if($paged == 1): ?>
     <div class="row main-posts">
     	<div class="col-md-6 left">
     		<?php the_post(); ?>
@@ -79,6 +81,7 @@
             </div>
     	</div>	    	
     </div>
+	<?php endif; ?>
 
 	<div class="row">
 		<div class="posts-container col-md-8">
