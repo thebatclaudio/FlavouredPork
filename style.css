@@ -648,6 +648,14 @@ input[type=submit]:hover, input[type=submit]:focus, .wpcf7-form-control.wpcf7-su
         padding-right: 15px;
     }
 
+    .small-featured .left .featured {
+        margin-left: 0px;
+    }
+
+    .small-featured .right .featured {
+        margin-right: 0px;
+    }
+
     .posts-container {
         padding-left: 50px;
     }
