@@ -5,9 +5,9 @@
     <div class="row main-posts">
     	<div class="col-md-6 left">
     		<?php the_post(); ?>
-            <div class="slide" style="background-image: url('<?php echo wp_get_attachment_url( get_post_thumbnail_id(get_the_ID()));?>')">
+            <div class="featured" style="background-image: url('<?php echo wp_get_attachment_url( get_post_thumbnail_id(get_the_ID()));?>')">
                 <img src="<?php echo wp_get_attachment_url( get_post_thumbnail_id(get_the_ID()));?>" alt="<?php the_title(); ?>" />                 	
-            	<div class="slide-post-content">
+            	<div class="featured-post-content">
             		<?php $cat = get_the_category(); ?>
 					<?php if($cat): ?>
 						<div class="category">
@@ -27,9 +27,9 @@
     		<div class="row">
     			<div class="col-md-12">
 		    		<?php the_post(); ?>
-	                <div class="slide" style="background-image: url('<?php echo wp_get_attachment_url( get_post_thumbnail_id(get_the_ID()));?>')">
+	                <div class="featured" style="background-image: url('<?php echo wp_get_attachment_url( get_post_thumbnail_id(get_the_ID()));?>')">
 	                    <img src="<?php echo wp_get_attachment_url( get_post_thumbnail_id(get_the_ID()));?>" alt="<?php the_title(); ?>" />                   	
-	                	<div class="slide-post-content">
+	                	<div class="featured-post-content">
 	                		<?php $cat = get_the_category(); ?>
 	                		<?php if($cat): ?>
 								<div class="category">
@@ -43,12 +43,12 @@
 	                </div>
                 </div>
             </div>  
-            <div class="row">
+            <div class="row small-featured">
             	<div class="col-md-6 left">
 		    		<?php the_post(); ?>
-	                <div class="slide" style="background-image: url('<?php echo wp_get_attachment_url( get_post_thumbnail_id(get_the_ID()));?>')">
+	                <div class="featured" style="background-image: url('<?php echo wp_get_attachment_url( get_post_thumbnail_id(get_the_ID()));?>')">
 	                    <img src="<?php echo wp_get_attachment_url( get_post_thumbnail_id(get_the_ID()));?>" alt="<?php the_title(); ?>" />
-	                	<div class="slide-post-content">
+	                	<div class="featured-post-content">
 	                		<?php $cat = get_the_category(); ?>
 	                		<?php if($cat): ?>
 								<div class="category">
@@ -63,9 +63,9 @@
             	</div>
             	<div class="col-md-6 right">
 		    		<?php the_post(); ?>
-	                <div class="slide" style="background-image: url('<?php echo wp_get_attachment_url( get_post_thumbnail_id(get_the_ID()));?>')">
+	                <div class="featured" style="background-image: url('<?php echo wp_get_attachment_url( get_post_thumbnail_id(get_the_ID()));?>')">
 	                    <img src="<?php echo wp_get_attachment_url( get_post_thumbnail_id(get_the_ID()));?>" alt="<?php the_title(); ?>" />                	
-	                	<div class="slide-post-content">
+	                	<div class="featured-post-content">
 	                		<?php $cat = get_the_category(); ?>
 	                		<?php if($cat): ?>
 								<div class="category">

@@ -17,6 +17,8 @@ body {
     font-family: Montserrat, sans-serif;
     background-color: #212121;
     color: #FFF;
+    overflow-x: hidden;
+    width: 100%;
 }
 
 header {
@@ -69,7 +71,7 @@ h2.site-description {
 }
 
 /* main container */
-div0.main-container {
+div.main-container {
     margin-top: 40px;
 }
 
@@ -518,22 +520,11 @@ input[type=submit]:hover, input[type=submit]:focus, .wpcf7-form-control.wpcf7-su
     right: 10px;
 }
 
-.main-posts {
-    padding-left: 0px;
-    padding-right: 0px;
+.main-posts .col-md-6 {
+    padding: 0px;
 }
 
-.main-posts .col-md-6.left {
-    padding-right: 0px;
-    padding-left: 0px;
-}
-
-.main-posts .col-md-6.right {
-    padding-left: 0px;
-    padding-right: 0px;
-}
-
-.slide {
+.featured {
     height: 500px;
     background-size: cover;
     background-position: center;
@@ -541,7 +532,12 @@ input[type=submit]:hover, input[type=submit]:focus, .wpcf7-form-control.wpcf7-su
     color: #FFF;
 }
 
-.slide::after {
+.small-featured .col-md-6 > .featured {
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+.featured::after {
     content: "";
     display: block;
     width: 100%;
@@ -553,33 +549,32 @@ input[type=submit]:hover, input[type=submit]:focus, .wpcf7-form-control.wpcf7-su
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#a6000000',GradientType=0 ); /* IE6-9 */
 }
 
-.slide img {
+.featured img {
     display: none;
 }
 
-.col-md-6.right .slide,  .col-md-6.mid-height .slide{
+.col-md-6.right .featured,  .col-md-6.mid-height .featured{
     height: 250px;
 }
 
-.slide-post-content {
+.featured-post-content {
     display: block;
     position: absolute;
     bottom: 0px;
     padding: 20px;
-    width: 100%;
 }
 
-.slide-post-content h3 {
+.featured-post-content h3 {
     font-size: 32px;
     margin: 0px;
 }
 
-.col-md-6.right .slide .slide-post-content h3 {
+.col-md-6.right .featured .featured-post-content h3 {
     font-size: 18px;
 }
 
 /* category link hover featured image */
-.slide a.category-link {
+.featured a.category-link {
     display: inline-block;
     width: auto;
     padding: 5px;
@@ -590,23 +585,23 @@ input[type=submit]:hover, input[type=submit]:focus, .wpcf7-form-control.wpcf7-su
     text-align: right;
 }
 
-.slide a.category-link:hover, .slide a.category-link:focus, .slide a.category-link:active, .slide a.btn-continue-reading:hover, .slide a.btn-continue-reading:active, .slide a.btn-continue-reading:focus {
+.featured a.category-link:hover, .featured a.category-link:focus, .featured a.category-link:active, .featured a.btn-continue-reading:hover, .featured a.btn-continue-reading:active, .featured a.btn-continue-reading:focus {
     text-decoration: none;
     background-color: #C62828;
     color: rgba(255,255,255,0.87);
 }
 
-.slide .category {
+.featured .category {
     text-align: left;
     margin-top: 0px;
     margin-bottom: 5px;
 }
 
-.slide a h3 {
+.featured a h3 {
     color: #FFF;
 }
 
-.slide a:hover h3, .slide a:focus h3, .slide a:active h3 {
+.featured a:hover h3, .featured a:focus h3, .featured a:active h3 {
     color: #E57373;
 }
 
