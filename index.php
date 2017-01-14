@@ -44,7 +44,7 @@
                 </div>
             </div>  
             <div class="row small-featured">
-            	<div class="col-md-6 left">
+            	<div class="col-md-6 col-sm-6 left">
 		    		<?php the_post(); ?>
 	                <div class="featured" style="background-image: url('<?php echo wp_get_attachment_url( get_post_thumbnail_id(get_the_ID()));?>')">
 	                    <img src="<?php echo wp_get_attachment_url( get_post_thumbnail_id(get_the_ID()));?>" alt="<?php the_title(); ?>" />
@@ -61,7 +61,7 @@
 	                	</div>
 	                </div>
             	</div>
-            	<div class="col-md-6 right">
+            	<div class="col-md-6 col-sm-6 right">
 		    		<?php the_post(); ?>
 	                <div class="featured" style="background-image: url('<?php echo wp_get_attachment_url( get_post_thumbnail_id(get_the_ID()));?>')">
 	                    <img src="<?php echo wp_get_attachment_url( get_post_thumbnail_id(get_the_ID()));?>" alt="<?php the_title(); ?>" />                	

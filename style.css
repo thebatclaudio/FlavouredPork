@@ -609,6 +609,14 @@ input[type=submit]:hover, input[type=submit]:focus, .wpcf7-form-control.wpcf7-su
     .post-content .tags {
         display: block;
     }
+
+    .small-featured .left .featured {
+        margin-right: 0px;
+    }
+
+    .small-featured .right .featured {
+        margin-left: 0px;
+    }
 }
 
 @media (min-width: 1024px) {
