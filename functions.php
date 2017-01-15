@@ -150,4 +150,6 @@ $args = array(
     'default-image' => get_template_directory_uri() . '/images/header.png',
 );
 add_theme_support( 'custom-header', $args );
+
+load_theme_textdomain( 'flv-prk', get_template_directory().'/languages' );
 ?>

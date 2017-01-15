@@ -20,7 +20,7 @@
 					<?php endif; ?>
 					<div class="post-content">
 						<div class="date">
-							<time datetime="get_the_time('U')"><?php echo human_time_diff( get_the_time('U'), current_time('timestamp') ) . ' fa'; ?></time>
+							<time datetime="get_the_time('U')"><?php echo human_time_diff( get_the_time('U'), current_time('timestamp') ) . ' ago'; ?></time>
 						</div>
 						<h1 class="title"><?php the_title(); ?></h1>
 						<p><?php the_content(); ?></p>

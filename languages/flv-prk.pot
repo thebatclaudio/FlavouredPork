@@ -1,0 +1,79 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: _s 0.2\n"
+"Report-Msgid-Bugs-To: http://wordpress.org/tags/_s\n"
+"POT-Creation-Date: 2014-03-30 17:37:52+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2014-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+
+#: category.php:24 index.php:21 index.php:105 tag.php:24
+msgid " ago"
+msgstr ""
+
+#: category.php:27 index.php:112 tag.php:27
+msgid "Read"
+msgstr ""
+
+#: functions.php:126
+msgid "Main Sidebar"
+msgstr ""
+
+#: functions.php:128
+msgid "Widgets in this area will be shown on all posts and pages."
+msgstr ""
+
+#: header.php:18 page-with-slider.php:18
+msgid "Return to home"
+msgstr ""
+
+#: includes/about_me_widget.php:11 includes/about_me_widget.php:24
+msgid "About Me"
+msgstr ""
+
+#: includes/about_me_widget.php:12
+msgid "About Me Widget"
+msgstr ""
+
+#: includes/about_me_widget.php:31
+msgid "Description"
+msgstr ""
+
+#: includes/slider_post_type.php:8 includes/slider_post_type.php:9
+msgid "Add New Slide"
+msgstr ""
+
+#: includes/slider_post_type.php:10
+msgid "Edit Slide"
+msgstr ""
+
+#: includes/slider_post_type.php:11
+msgid "New Slide"
+msgstr ""
+
+#: includes/slider_post_type.php:12
+msgid "View Slide"
+msgstr ""
+
+#: includes/slider_post_type.php:13
+msgid "Search Slides"
+msgstr ""
+
+#: includes/slider_post_type.php:14 includes/slider_post_type.php:15
+#: includes/slider_post_type.php:16 includes/slider_post_type.php:26
+msgid "Slide"
+msgstr ""
+
+#: includes/slider_post_type.php:17
+msgid "Slides"
+msgstr ""
+
+#: languages/i18n/t/data/add-textdomain-0-result.php:3
+#: languages/i18n/t/data/add-textdomain-0-result.php:4
+#: languages/i18n/t/data/add-textdomain-0.php:3
+#: languages/i18n/t/data/add-textdomain-0.php:4
+msgid "Hello World"
+msgstr ""
