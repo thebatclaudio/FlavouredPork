@@ -1,4 +1,4 @@
-# FlavouredPork
+# FlavouredPork(/screenshot.png)
 FlavouredPork is a clean WordPress theme ideal for blogs. It's designed to offer the better experience to users in each device. 
 
 [See it in action](http://flavouredpork.claudiolabarbera.com/)
