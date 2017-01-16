@@ -6,11 +6,20 @@ class FlvPrkAboutMeWidget extends WP_Widget {
      * Sets up the widgets name etc
      */
     function __construct() {
+        add_action('admin_enqueue_scripts', array($this, 'scripts'));
+
         parent::__construct(
             'about_me_widget', // Base ID
             __( 'About Me', 'flv_prk' ), // Name
             array( 'description' => __( 'About Me Widget', 'flv-prk' ), ) // Args
         );
+    }
+
+    public function scripts()
+    {
+        wp_enqueue_script( 'media-upload' );
+        wp_enqueue_media();
+        wp_enqueue_script('about_me_widget', get_template_directory_uri() . '/js/about_me_widget.js', array('jquery'));
     }
 
     /**
@@ -24,31 +33,32 @@ class FlvPrkAboutMeWidget extends WP_Widget {
         $title = ! empty( $instance['title'] ) ? $instance['title'] : __( 'About Me', 'flv-prk' );
         ?>
         <p>
-        <label for="<?php echo esc_attr( $this->get_field_id( 'title' ) ); ?>"><?php _e( esc_attr( 'Title:' ) ); ?></label> 
-        <input class="widefat" id="<?php echo esc_attr( $this->get_field_id( 'title' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'title' ) ); ?>" type="text" value="<?php echo esc_attr( $title ); ?>">
+            <label for="<?php echo esc_attr( $this->get_field_id( 'title' ) ); ?>"><?php _e( esc_attr( 'Title:' ) ); ?></label> 
+            <input class="widefat" id="<?php echo esc_attr( $this->get_field_id( 'title' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'title' ) ); ?>" type="text" value="<?php echo esc_attr( $title ); ?>">
         </p>
         <?php
         $description = ! empty( $instance['description'] ) ? $instance['description'] : __( 'Description', 'flv-prk' );
         ?>
         <p>
-        <label for="<?php echo esc_attr( $this->get_field_id( 'description' ) ); ?>"><?php _e( esc_attr( 'Description:' ) ); ?></label> 
-        <textarea class="widefat" id="<?php echo esc_attr( $this->get_field_id( 'description' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'description' ) ); ?>"><?php echo esc_attr( $description ); ?></textarea>
+            <label for="<?php echo esc_attr( $this->get_field_id( 'description' ) ); ?>"><?php _e( esc_attr( 'Description:' ) ); ?></label> 
+            <textarea class="widefat" id="<?php echo esc_attr( $this->get_field_id( 'description' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'description' ) ); ?>"><?php echo esc_attr( $description ); ?></textarea>
         </p>
         <?php
         $image_url = ! empty( $instance['image_url'] ) ? $instance['image_url'] : "";
         ?>
         <p>
-        <label for="<?php echo esc_attr( $this->get_field_id( 'image_url' ) ); ?>"><?php _e( esc_attr( 'Image URL:' ) ); ?></label> 
-        <input class="widefat" id="<?php echo esc_attr( $this->get_field_id( 'image_url' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'image_url' ) ); ?>" type="text" value="<?php echo esc_attr( $image_url ); ?>">
+            <label for="<?php echo esc_attr( $this->get_field_id( 'image_url' ) ); ?>"><?php _e( esc_attr( 'Image URL:' ) ); ?></label> 
+            <input class="widefat" id="<?php echo esc_attr( $this->get_field_id( 'image_url' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'image_url' ) ); ?>" type="text" value="<?php echo esc_attr( $image_url ); ?>">
+            <button class="upload_image_button button button-primary">Upload Image</button>
         </p>
         <?php 
         $circle_image = ! empty( $instance['circle_image'] ) ? $instance['circle_image'] : "";
         ?>
         <p>
-        <label for="<?php echo esc_attr( $this->get_field_id( 'circle_image' ) ); ?>">
-        <input class="widefat" id="<?php echo esc_attr( $this->get_field_id( 'circle_image' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'circle_image' ) ); ?>" type="checkbox" <?php if($circle_image){ ?> checked <?php } ?>>
-             <?php _e( esc_attr( 'Rounded image' ) ); ?>
-        </label> 
+            <label for="<?php echo esc_attr( $this->get_field_id( 'circle_image' ) ); ?>">
+            <input class="widefat" id="<?php echo esc_attr( $this->get_field_id( 'circle_image' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'circle_image' ) ); ?>" type="checkbox" <?php if($circle_image){ ?> checked <?php } ?>>
+                 <?php _e( esc_attr( 'Rounded image' ) ); ?>
+            </label> 
         </p>
         <?php 
     }
