@@ -10,7 +10,7 @@ class FlvPrkAboutMeWidget extends WP_Widget {
 
         parent::__construct(
             'about_me_widget', // Base ID
-            __( 'About Me', 'flv_prk' ), // Name
+            __( 'About Me', 'flv-prk' ), // Name
             array( 'description' => __( 'About Me Widget', 'flv-prk' ), ) // Args
         );
     }
