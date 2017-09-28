@@ -6,22 +6,22 @@ FlavouredPork is a clean WordPress theme ideal for blogs. It's designed to offer
 
 [See it in action](http://flavouredpork.claudiolabarbera.com/)
 
-#Features
+# Features
 - Responsive Layout (built with Bootstrap)
 - Support for FlexSlider
 - "About me" Widget
 
-#Dependencies
+# Dependencies
 - [Twitter Bootstrap](http://getbootstrap.com)
 - [jQuery](http://jquery.com)
 - [FlexSlider](http://flexslider.woothemes.com/)
 - [FontAwesome](http://fontawesome.io/)
 
-#Theme License
+# Theme License
 
 The FlavouredPork WordPress Theme itself is nothing but 100% GPLv3. See headers of files for further details.GNU GPL v3.0 or later
 
-#Font Awesome License
+# Font Awesome License
 
 Font License - http://fontawesome.io License: SIL OFL 1.1 License URI: http://scripts.sil.org/OFL Copyright: Dave Gandy, http://fontawesome.io
 
