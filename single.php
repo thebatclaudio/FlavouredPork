@@ -7,12 +7,16 @@
 		<div class="row">
 			<article class="posts-container col-md-8">
 				<div class="post single">
-					<figure class="featured-image <?php if($odd) echo "odd"; ?>" style="background-image: url('<?php echo wp_get_attachment_url( get_post_thumbnail_id(get_the_ID()));?>')">
-						<img src="<?php echo wp_get_attachment_url( get_post_thumbnail_id(get_the_ID()));?>" alt="<?php the_title(); ?>" />
-					</figure>
+				<?php 
+					$featured_img_url = wp_get_attachment_url( get_post_thumbnail_id(get_the_ID()));
+					if($featured_img_url): ?>
+						<figure class="featured-image <?php if($odd) echo "odd"; ?>" style="background-image: url('<?php echo wp_get_attachment_url( get_post_thumbnail_id(get_the_ID()));?>')">
+							<img src="<?php echo wp_get_attachment_url( get_post_thumbnail_id(get_the_ID()));?>" alt="<?php the_title(); ?>" />
+						</figure>
+				<?php endif; ?>
 					<?php $cat = get_the_category(); ?>
 					<?php if($cat): ?>
-						<div class="category">
+						<div class="category <?php echo ($featured_img_url) ? '' : 'category-no-margin'; ?>">
 							<a href="<?php echo get_category_link($cat[0]->term_id); ?>" title="<?php echo $cat[0]->name;?>" class="category-link">
 								<?php echo $cat[0]->name;?>
 							</a>
